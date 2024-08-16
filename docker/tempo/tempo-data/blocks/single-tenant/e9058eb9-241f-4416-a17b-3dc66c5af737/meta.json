@@ -1,0 +1,1 @@
+{"format":"vParquet4","blockID":"e9058eb9-241f-4416-a17b-3dc66c5af737","tenantID":"single-tenant","startTime":"2024-08-16T01:19:34Z","endTime":"2024-08-16T01:49:34Z","totalObjects":377,"size":75247,"compactionLevel":0,"encoding":"none","indexPageSize":0,"totalRecords":1,"dataEncoding":"","bloomShards":1,"footerSize":17567}

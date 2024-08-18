@@ -8,3 +8,5 @@ This project demonstrates how to use Spring Boot with Prometheus and Grafana for
 - Maven
 - Prometheus
 - Grafana
+
+![Architecture](observability_architecture.png)

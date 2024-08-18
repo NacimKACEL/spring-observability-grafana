@@ -18,7 +18,7 @@ import com.smartsys.service.TodoService;
 @RestController
 public class TodoController {
 
-    TodoService todoService;
+    private final TodoService todoService;
 
     public TodoController(TodoService todoService) {
         this.todoService = todoService;

@@ -9,4 +9,9 @@ This project demonstrates how to use Spring Boot with Prometheus and Grafana for
 - Prometheus
 - Grafana
 
+## How to run :
+- mvn clean package
+- docker-compose up --build
+
+
 ![Architecture](observability_architecture.png)

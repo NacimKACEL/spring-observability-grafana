@@ -1,12 +1,16 @@
 package com.smartsys;
 
+import java.util.Date;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import com.smartsys.entities.Product;
+import com.smartsys.entities.Todo;
 import com.smartsys.repository.ProductRepository;
+import com.smartsys.repository.TodoRepository;
 
 @SpringBootApplication
 public class DemoApplication {
@@ -16,7 +20,7 @@ public class DemoApplication {
 	}
 
 	@Bean
-	CommandLineRunner commandLineRunner(ProductRepository productRepository) {
+	CommandLineRunner commandLineRunner(ProductRepository productRepository, TodoRepository todoRepository) {
 		return args -> {
 	
 			productRepository.save(Product.builder()
@@ -39,7 +43,27 @@ public class DemoApplication {
 										.price(20.0)
 										.build());
 
+			todoRepository.save(Todo.builder()
+											.title("Training Prometheus")
+											.createdAt(new Date())
+											.completed(false)
+											.build());
+
+			todoRepository.save(Todo.builder()
+											.title("Watch Prometheus Movie")
+											.createdAt(new Date())
+											.completed(false)
+											.build());
+			
+			todoRepository.save(Todo.builder()
+											.title("Play musique")
+											.createdAt(new Date())
+											.completed(false)
+											.build());
+			
+			todoRepository.findAll().forEach(System.out::println);
 			productRepository.findAll().forEach(System.out::println);
+
 		};
 	}
 
